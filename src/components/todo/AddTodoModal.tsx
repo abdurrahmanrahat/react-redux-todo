@@ -1,3 +1,5 @@
+import { addTodo } from "@/redux/features/todoSlice";
+import { useAppDispatch } from "@/redux/hook";
 import { FormEvent, useState } from "react";
 import { Button } from "../ui/button";
 import {
@@ -13,13 +15,17 @@ import { Input } from "../ui/input";
 import { Label } from "../ui/label";
 
 const AddTodoModal = () => {
-  const [task, setTask] = useState("");
+  const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
+
+  const dispatch = useAppDispatch();
 
   const onSubmit = (e: FormEvent) => {
     e.preventDefault();
 
-    console.log({ task, description });
+    const taskDetails = { title, description };
+
+    dispatch(addTodo(taskDetails));
   };
 
   return (
@@ -44,7 +50,7 @@ const AddTodoModal = () => {
                 Task
               </Label>
               <Input
-                onBlur={(e) => setTask(e.target.value)}
+                onBlur={(e) => setTitle(e.target.value)}
                 id="task"
                 className="col-span-3"
               />
