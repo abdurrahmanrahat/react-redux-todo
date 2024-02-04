@@ -19,6 +19,7 @@ const TodoContainer = () => {
           {todos.map((item) => (
             <TodoCard
               key={item.id}
+              id={item.id}
               title={item.title}
               description={item.description}
             />
