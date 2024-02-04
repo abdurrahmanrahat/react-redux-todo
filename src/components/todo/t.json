@@ -1,0 +1,58 @@
+[
+  {
+    "id": "1",
+    "title": "Complete Assignment",
+    "description": "Finish the coding assignment by tomorrow.",
+    "isCompleted": false,
+    "priority": "high"
+  },
+  {
+    "id": "2",
+    "title": "Read a Book",
+    "description": "Start reading the new novel before bedtime.",
+    "isCompleted": false,
+    "priority": "medium"
+  },
+  {
+    "id": "3",
+    "title": "Exercise",
+    "description": "Go for a 30-minute jog in the evening.",
+    "isCompleted": false,
+    "priority": "low"
+  },
+  {
+    "id": "4",
+    "title": "Grocery Shopping",
+    "description": "Buy vegetables, fruits, and other essentials.",
+    "isCompleted": false,
+    "priority": "high"
+  },
+  {
+    "id": "5",
+    "title": "Learn React",
+    "description": "Begin learning React.js for web development.",
+    "isCompleted": false,
+    "priority": "medium"
+  },
+  {
+    "id": "6",
+    "title": "Call Mom",
+    "description": "Give Mom a call to catch up on the weekend plans.",
+    "isCompleted": false,
+    "priority": "low"
+  },
+  {
+    "id": "7",
+    "title": "Write Blog Post",
+    "description": "Draft a new blog post about TypeScript and React.",
+    "isCompleted": false,
+    "priority": "high"
+  },
+  {
+    "id": "8",
+    "title": "Movie Night",
+    "description": "Plan a movie night with friends for the weekend.",
+    "isCompleted": false,
+    "priority": "medium"
+  }
+]
