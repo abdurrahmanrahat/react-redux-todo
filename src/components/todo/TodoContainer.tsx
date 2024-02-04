@@ -7,6 +7,10 @@ const TodoContainer = () => {
   // fetchind todos to display.
   const { todos } = useAppSelector((state) => state.todos);
 
+  // data from server by RTK query
+  // const { data, isLoading, isError } = useGetTodosQuery(undefined);
+  // console.log(data);
+
   return (
     <div>
       <div className="flex justify-between mb-5">
