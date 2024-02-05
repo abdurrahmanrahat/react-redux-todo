@@ -1,5 +1,4 @@
-import { useUpdateTodoMutation } from "@/redux/api/api";
-import { removeTodo } from "@/redux/features/todoSlice";
+import { useRemoveTodoMutation, useUpdateTodoMutation } from "@/redux/api/api";
 import Edit from "../icon/Edit";
 import Trash from "../icon/Trash";
 import { Button } from "../ui/button";
@@ -21,7 +20,11 @@ const TodoCard = ({
 }: TTodoCardProps) => {
   // const dispatch = useAppDispatch();
 
+  // update todo
   const [updateTodo, { isLoading }] = useUpdateTodoMutation();
+
+  // delete todo
+  const [removeTodo, { data }] = useRemoveTodoMutation();
 
   const toggleState = () => {
     const taskData = {
@@ -72,7 +75,7 @@ const TodoCard = ({
       </div>
       <p className="flex-[2]">{description}</p>
       <div className="space-x-5">
-        <Button onClick={() => dispatch(removeTodo(id))} className="bg-red-500">
+        <Button onClick={() => removeTodo(_id)} className="bg-red-500">
           <Trash />
         </Button>
         <Button className="bg-[#5C53FE]">
