@@ -33,6 +33,8 @@ const AddTodoModal = () => {
   // for server
   const [addTodo, { data }] = useAddTodoMutation();
 
+  console.log(data);
+
   const onSubmit = (e: FormEvent) => {
     e.preventDefault();
 

@@ -26,6 +26,8 @@ const TodoCard = ({
   // delete todo
   const [removeTodo, { data }] = useRemoveTodoMutation();
 
+  console.log(data, isLoading);
+
   const toggleState = () => {
     const taskData = {
       title,

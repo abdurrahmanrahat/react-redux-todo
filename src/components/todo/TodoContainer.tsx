@@ -4,6 +4,14 @@ import AddTodoModal from "./AddTodoModal";
 import TodoCard from "./TodoCard";
 import TodoFilter from "./TodoFilter";
 
+type TTaskItem = {
+  _id: string;
+  title: string;
+  description: string;
+  isCompleted?: boolean;
+  priority: string;
+};
+
 const TodoContainer = () => {
   const [priority, setPriority] = useState("");
   // fetchind todos to display.
@@ -25,7 +33,7 @@ const TodoContainer = () => {
 
       <div className="bg-primary-gradient w-full h-full rounded-lg space-y-4 p-[5px]">
         <div className="bg-white p-5 w-full h-full rounded-lg space-y-3">
-          {todos?.data.map((item) => (
+          {todos?.data.map((item: TTaskItem) => (
             <TodoCard
               key={item._id}
               _id={item._id}

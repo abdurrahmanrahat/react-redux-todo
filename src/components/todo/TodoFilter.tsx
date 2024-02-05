@@ -1,3 +1,4 @@
+import React from "react";
 import { Button } from "../ui/button";
 import {
   DropdownMenu,
@@ -9,7 +10,12 @@ import {
   DropdownMenuTrigger,
 } from "../ui/dropdown-menu";
 
-const TodoFilter = ({ priority, setPriority }) => {
+type TTodoFilterProps = {
+  priority: string;
+  setPriority: React.Dispatch<React.SetStateAction<string>>;
+};
+
+const TodoFilter = ({ priority, setPriority }: TTodoFilterProps) => {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>

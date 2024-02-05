@@ -3,8 +3,10 @@ import Container from "@/components/ui/Container";
 
 const Todo = () => {
   return (
-    <Container>
-      <h2 className="text-center text-3xl font-semibold my-10">My Todos</h2>
+    <Container className="mb-10">
+      <h2 className="text-center text-3xl md:text-5xl font-semibold my-10">
+        My Todos
+      </h2>
       <TodoContainer></TodoContainer>
     </Container>
   );
