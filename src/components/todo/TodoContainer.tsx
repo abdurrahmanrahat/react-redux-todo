@@ -16,8 +16,6 @@ const TodoContainer = () => {
     return <h1>Loading...</h1>;
   }
 
-  console.log(todos);
-
   return (
     <div>
       <div className="flex justify-between mb-5">
@@ -30,7 +28,7 @@ const TodoContainer = () => {
           {todos?.data.map((item) => (
             <TodoCard
               key={item._id}
-              id={item._id}
+              _id={item._id}
               title={item.title}
               description={item.description}
               isCompleted={item.isCompleted}
